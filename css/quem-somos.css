@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: #f7fafc;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-header {
+  background-color: #1a2a22;
+  color: #ffffff;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo h1 span {
+  color: #2ecc71;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: #cbd5e0;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.nav-links a.active {
+  color: #2ecc71;
+}
+
+.nav-links .btn-cta {
+  background-color: #2ecc71;
+  color: #1a2a22;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.content-wrapper {
+  flex: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  width: 100%;
+}
+
+.page-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.page-title h2 {
+  font-size: 36px;
+  color: #1a2a22;
+}
+
+.grid-grupo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.cracha-grupo {
+  background-color: white;
+  border-radius: 12px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border-top: 4px solid #1a2a22;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.foto-integrante {
+  width: 110px;
+  height: 110px;
+  margin-bottom: 15px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #edf2f7;
+}
+
+.foto-integrante img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cracha-grupo h3 {
+  color: #1a2a22;
+  margin-bottom: 4px;
+}
+
+.funcao {
+  color: #2ecc71;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.rm {
+  background-color: #edf2f7;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #4a5568;
+  margin-bottom: 20px;
+}
+
+.links-sociais {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.btn-social {
+  flex: 1;
+  max-width: 100px;
+  padding: 8px 0;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+}
+
+.btn-social.github {
+  background-color: #1a2a22;
+  color: #ffffff;
+}
+
+.btn-social.linkedin {
+  background-color: #2ecc71;
+  color: #1a2a22;
+}
+
+.footer {
+  background-color: #1a2a22;
+  color: #718096;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  margin-top: auto;
+}
