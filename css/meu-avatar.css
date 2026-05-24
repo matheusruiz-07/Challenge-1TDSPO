@@ -45,3 +45,90 @@ body {
 .nav-links a.active {
   color: #2ecc71;
 }
+
+.app-container {
+  display: flex;
+  min-height: calc(100vh - 77px);
+}
+
+.conteudo-dashboard {
+  flex: 1;
+  padding: 30px;
+}
+
+.status-usuario-container, 
+.missoes-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.status-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 12px;
+  margin-bottom: 15px;
+}
+
+.status-header h2 {
+  color: #1a2a22;
+}
+
+.pontuacao-usuario {
+  background-color: #edf2f7;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.pontuacao-usuario strong {
+  color: #2ecc71;
+}
+
+.nivel-status {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+#imagem-usuario {
+  font-size: 3rem;
+  background-color: #e8f8f0;
+  padding: 15px;
+  border-radius: 50%;
+}
+
+.progress-bar-container {
+  flex: 1;
+}
+
+.progress-bar {
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  height: 15px;
+  overflow: hidden;
+  margin: 5px 0;
+}
+
+.progress-fill {
+  background-color: #2ecc71;
+  height: 100%;
+}
+
+.mission-list {
+  margin-top: 15px;
+}
+
+.mission-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
