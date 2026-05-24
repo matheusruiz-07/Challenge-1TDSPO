@@ -84,6 +84,70 @@ body {
   flex-direction: column;
   align-items: center;
 }
+.foto-integrante {
+  width: 110px;
+  height: 110px;
+  margin-bottom: 15px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #edf2f7;
+}
+
+.foto-integrante img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cracha-grupo h3 {
+  color: #1a2a22;
+  margin-bottom: 4px;
+}
+
+.funcao {
+  color: #2ecc71;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.rm {
+  background-color: #edf2f7;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #4a5568;
+  margin-bottom: 20px;
+}
+
+.links-sociais {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.btn-social {
+  flex: 1;
+  max-width: 100px;
+  padding: 8px 0;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+}
+
+.btn-social.github {
+  background-color: #1a2a22;
+  color: #ffffff;
+}
+
+.btn-social.linkedin {
+  background-color: #2ecc71;
+  color: #1a2a22;
+}
 
 .footer {
   background-color: #1a2a22;
