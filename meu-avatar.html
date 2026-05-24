@@ -24,5 +24,50 @@
             </nav>
         </div>
     </header>
+
+    <div class="app-container">
+        <main class="conteudo-dashboard">
+            
+            <section class="status-usuario-container">
+                <div class="status-header">
+                    <h2>Evolução do seu Avatar</h2>
+                    <div class="pontuacao-usuario">
+                        <p>Pontos Acumulados: <strong id="total-pontos">1,250</strong> pts</p>
+                    </div>
+                </div>
+
+                <div class="nivel-status">
+                    <div id="imagem-usuario" class="level-1">🌱</div>
+                    <div class="progress-bar-container">
+                        <p>Nível 2 (Muda de Planta)</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 65%;"></div>
+                        </div>
+                        <small>Faltam 350 XP para o próximo nível</small>
+                    </div>
+                </div>
+            </section>
+
+            <section class="missoes-container">
+                <h3>Missões de Hoje</h3>
+                <div class="mission-list">
+                    <div class="mission-item">
+                        <input type="checkbox" id="mission1" class="mission-checkbox" data-points="50">
+                        <label for="mission1">
+                            <strong>Apagar as luzes:</strong> Confirmar que desligou aparelhos em stand-by hoje (+50 pts)
+                        </label>
+                    </div>
+                    <div class="mission-item">
+                        <input type="checkbox" id="mission2" class="mission-checkbox" data-points="100">
+                        <label for="mission2">
+                            <strong>Descarte Consciente:</strong> Separar o lixo reciclável da semana (+100 pts)
+                        </label>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="./js/script.js" defer></script>
 </body>
 </html>
