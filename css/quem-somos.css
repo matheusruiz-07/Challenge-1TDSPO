@@ -49,6 +49,42 @@ body {
   text-decoration: none;
 }
 
+.content-wrapper {
+  flex: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  width: 100%;
+}
+
+.page-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.page-title h2 {
+  font-size: 36px;
+  color: #1a2a22;
+}
+
+.grid-grupo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.cracha-grupo {
+  background-color: white;
+  border-radius: 12px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border-top: 4px solid #1a2a22;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .footer {
   background-color: #1a2a22;
   color: #718096;
