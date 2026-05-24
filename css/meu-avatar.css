@@ -1,21 +1,20 @@
-/* Reset Básico */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Segoe UI", sans-serif; /* Unificado com o padrão */
+  font-family: "Segoe UI", sans-serif;
 }
 
 body {
-  background-color: #f7fafc; /* Unificado com o fundo padrão */
+  background-color: #f7fafc; 
   color: #333;
 }
 
-/* Header - AGORA EXATAMENTE IGUAL AO PADRÃO */
 .main-header {
-  background-color: #1a2a22; /* Corrigido para o verde escuro correto */
+  background-color: #1a2a22; 
   color: #ffffff;
-  padding: 20px 40px; /* Corrigido para as dimensões exatas */
+  padding: 20px 40px; 
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -25,17 +24,15 @@ body {
   color: #2ecc71;
 }
 
-/* Agrupamento do lado direito do header */
 .header-right {
   display: flex;
   align-items: center;
 }
 
-/* Barra de Navegação Superior - IGUAL AO PADRÃO */
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 25px; /* Ajustado para bater com o padrão */
+  gap: 25px; 
 }
 
 .nav-links a {
@@ -49,13 +46,11 @@ body {
   color: #2ecc71;
 }
 
-/* Container Geral */
 .app-container {
   display: flex;
-  min-height: calc(100vh - 77px); /* Ajustado dinamicamente para a nova altura do header */
+  min-height: calc(100vh - 77px);
 }
 
-/* Dashboard Principal */
 .conteudo-dashboard {
   flex: 1;
   padding: 30px;
@@ -70,7 +65,7 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
-/* Cabeçalho da área do avatar (Título + Pontos) */
+
 .status-header {
   display: flex;
   justify-content: space-between;
@@ -84,7 +79,6 @@ body {
   color: #1a2a22;
 }
 
-/* Caixinha de pontos dentro da seção */
 .pontuacao-usuario {
   background-color: #edf2f7;
   padding: 6px 14px;
@@ -141,7 +135,6 @@ body {
   border-bottom: 1px solid #eee;
 }
 
-/* Chat Lateral do Avatar */
 .avatar-chat-container {
   width: 350px;
   background-color: #fff;
@@ -199,7 +192,7 @@ body {
 }
 
 .chat-input-area button {
-  background-color: #1a2a22; /* Sincronizado com o tom escuro do site */
+  background-color: #1a2a22;
   color: white;
   border: none;
   padding: 0 15px;
