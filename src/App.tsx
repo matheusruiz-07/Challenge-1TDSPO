@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Contato from "./pages/Contato";
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
             </p>
           }
         />
+        <Route path="/contato" element={<Contato />} />
       </Routes>
     </BrowserRouter>
   );
