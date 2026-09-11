@@ -1,0 +1,6 @@
+# padroniza o fim de linha entre Windows e macOS
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
