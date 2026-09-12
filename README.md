@@ -104,7 +104,7 @@ npm run preview
 ### Links
 
 - **Repositório:** <https://github.com/matheusruiz-07/Challenge-1TDSPO>
-- **Vídeo de apresentação:** [PREENCHER: colar a URL do YouTube]
+- **Vídeo de apresentação:** <https://youtu.be/mIHZOm-AsJk>
 
 ---
 
