@@ -38,6 +38,7 @@ Challenge-1TDSPO/
 ├── vite.config.ts             configuração do build
 ├── tsconfig.json              TypeScript em modo strict
 ├── tailwind.config.js         paleta e tema do projeto
+├── public/                    favicon, copiado direto para o build
 ├── assets/                    fotos dos integrantes
 └── src/
     ├── main.tsx               ponto de partida da aplicação
