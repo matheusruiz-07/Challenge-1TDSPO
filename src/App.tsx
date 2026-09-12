@@ -1,19 +1,24 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Layout from "./components/Layout";
 import Contato from "./pages/Contato";
+import Home from "./pages/Home";
 
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route
-          path="/"
-          element={
-            <p className="p-8 text-slate-600">
-              SoulUp em migracao para React. As paginas entram nos proximos commits.
-            </p>
-          }
-        />
-        <Route path="/contato" element={<Contato />} />
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="contato" element={<Contato />} />
+          <Route
+            path="*"
+            element={
+              <p className="text-slate-600">
+                Esta página entra nos próximos commits da migração.
+              </p>
+            }
+          />
+        </Route>
       </Routes>
     </BrowserRouter>
   );
