@@ -5,27 +5,29 @@ export const perguntas: Pergunta[] = [
     id: 1,
     pergunta: "Como meu avatar acumula XP?",
     resposta:
-      "Sempre que voce cumpre e marca uma missao ecologica no painel, seu avatar absorve esses pontos e " +
-      "evolui de estagio biologico, indo de muda de planta para arvore.",
+      "Sempre que você cumpre e marca uma missão ecológica no painel, seu avatar absorve esses pontos e " +
+      "evolui de estágio biológico, indo de muda de planta para árvore.",
   },
   {
     id: 2,
-    pergunta: "Vou poder usar o bot em outros canais?",
+    pergunta: "O avatar entende o que eu escrevo para ele?",
     resposta:
-      "Sim. A solucao preve integracao com o Telegram por meio de Node-RED e IBM Watson Assistant.",
+      "Estamos treinando o Soul para isso. Já montamos uma base com mil mensagens em português, separadas " +
+      "em quatro intenções: pedir uma sugestão, pedir incentivo, consultar o próprio progresso e tirar uma " +
+      "dúvida sobre sustentabilidade. O modelo que classifica essas mensagens entra na próxima etapa.",
   },
   {
     id: 3,
-    pergunta: "Trocar um premio faz meu nivel cair?",
+    pergunta: "Trocar um prêmio faz meu nível cair?",
     resposta:
-      "Nao. A experiencia que define o nivel nunca diminui. O resgate desconta apenas do saldo de pontos, " +
-      "que e a moeda usada para trocar recompensas.",
+      "Não. A experiência que define o nível nunca diminui. O resgate desconta apenas do saldo de pontos, " +
+      "que é a moeda usada para trocar recompensas.",
   },
   {
     id: 4,
     pergunta: "Onde os meus dados ficam guardados?",
     resposta:
-      "Em um banco Oracle com dez tabelas e restricoes de integridade. O progresso continua salvo depois " +
-      "que voce fecha o aplicativo.",
+      "Em um banco Oracle com dez tabelas e restrições de integridade. O progresso continua salvo depois " +
+      "que você fecha o aplicativo.",
   },
 ];
