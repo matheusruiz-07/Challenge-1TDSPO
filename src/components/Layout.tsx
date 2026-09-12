@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
-// import Footer from "./Footer";
-// import Header from "./Header";
+import Footer from "./Footer";
+import Header from "./Header";
 
 export default function Layout() {
   const { pathname } = useLocation();
@@ -12,11 +12,11 @@ export default function Layout() {
 
   return (
     <div className="flex min-h-screen flex-col">
-      {/* <Header /> */}
+      <Header />
       <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-8">
         <Outlet />
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
