@@ -5,13 +5,17 @@ import { RouterProvider } from "react-router/dom";
 import "./index.css";
 import App from "./App.tsx";
 import Contato from "./pages/Contato.tsx";
+import EditarUsuario from "./pages/EditarUsuario.tsx";
 import Erro from "./pages/Erro.tsx";
 import Faq from "./pages/Faq.tsx";
 import Home from "./pages/Home.tsx";
 import IntegranteDetalhe from "./pages/IntegranteDetalhe.tsx";
 import Integrantes from "./pages/Integrantes.tsx";
+import NovoUsuario from "./pages/NovoUsuario.tsx";
+import PerfilUsuario from "./pages/PerfilUsuario.tsx";
 import Sobre from "./pages/Sobre.tsx";
 import Solucao from "./pages/Solucao.tsx";
+import Usuarios from "./pages/Usuarios.tsx";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +26,10 @@ const router = createBrowserRouter([
       { path: "/", element: <Home /> },
       { path: "/sobre", element: <Sobre /> },
       { path: "/solucao", element: <Solucao /> },
+      { path: "/usuarios", element: <Usuarios /> },
+      { path: "/usuarios/novo", element: <NovoUsuario /> },
+      { path: "/usuarios/:id", element: <PerfilUsuario /> },
+      { path: "/usuarios/:id/editar", element: <EditarUsuario /> },
       { path: "/integrantes", element: <Integrantes /> },
       { path: "/integrantes/:rm", element: <IntegranteDetalhe /> },
       { path: "/faq", element: <Faq /> },
