@@ -1,10 +1,13 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router";
+import { useUsuarioAtivo } from "../contexts/UsuarioAtivoContext";
 
 const links = [
   { nome: "Home", caminho: "/" },
   { nome: "Sobre", caminho: "/sobre" },
-  { nome: "Solucao", caminho: "/solucao" },
+  { nome: "Usuários", caminho: "/usuarios" },
+  { nome: "Registrar ação", caminho: "/registrar" },
+  { nome: "Missões", caminho: "/missoes" },
   { nome: "Integrantes", caminho: "/integrantes" },
   { nome: "FAQ", caminho: "/faq" },
   { nome: "Contato", caminho: "/contato" },
@@ -20,6 +23,8 @@ function classeDoLink({ isActive }: { isActive: boolean }) {
 
 export default function Header() {
   const [menuAberto, setMenuAberto] = useState(false);
+  const { usuarioAtivo } = useUsuarioAtivo();
+  const primeiroNome = usuarioAtivo?.nome.split(" ")[0];
 
   return (
     <header className="bg-folha-700 text-white">
@@ -28,7 +33,7 @@ export default function Header() {
           Soul<span className="text-folha-200">Up</span>
         </NavLink>
 
-        <nav className="hidden items-center gap-1 md:flex" aria-label="Navegacao principal">
+        <nav className="hidden items-center gap-1 lg:flex" aria-label="Navegacao principal">
           {links.map((link) => (
             <NavLink
               key={link.caminho}
@@ -39,11 +44,20 @@ export default function Header() {
               {link.nome}
             </NavLink>
           ))}
+          {usuarioAtivo && (
+            <NavLink
+              to={`/usuarios/${usuarioAtivo.id}`}
+              className="ml-2 rounded-full bg-folha-50 px-3 py-1.5 text-xs font-semibold text-folha-700 hover:bg-folha-200"
+              title="Perfil em uso"
+            >
+              Olá, {primeiroNome}
+            </NavLink>
+          )}
         </nav>
 
         <button
           type="button"
-          className="rounded-md border border-folha-200 px-3 py-2 text-sm font-semibold text-white md:hidden"
+          className="cursor-pointer rounded-md border border-folha-200 px-3 py-2 text-sm font-semibold text-white lg:hidden"
           aria-controls="menu-celular"
           aria-expanded={menuAberto}
           onClick={() => setMenuAberto((aberto) => !aberto)}
@@ -54,7 +68,7 @@ export default function Header() {
 
       <nav
         id="menu-celular"
-        className={`${menuAberto ? "block" : "hidden"} border-t border-folha-500 px-4 pb-4 md:hidden`}
+        className={`${menuAberto ? "block" : "hidden"} border-t border-folha-500 px-4 pb-4 lg:hidden`}
         aria-label="Navegacao no celular"
       >
         <div className="mx-auto flex w-full max-w-5xl flex-col gap-1 pt-3">
@@ -69,6 +83,15 @@ export default function Header() {
               {link.nome}
             </NavLink>
           ))}
+          {usuarioAtivo && (
+            <NavLink
+              to={`/usuarios/${usuarioAtivo.id}`}
+              className="mt-2 rounded-md bg-folha-50 px-3 py-2 text-sm font-semibold text-folha-700"
+              onClick={() => setMenuAberto(false)}
+            >
+              Perfil em uso: {usuarioAtivo.nome}
+            </NavLink>
+          )}
         </div>
       </nav>
     </header>

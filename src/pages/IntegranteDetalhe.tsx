@@ -1,4 +1,4 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router";
 import Botao from "../components/Botao";
 import { buscarIntegrante } from "../data/integrantes";
 
@@ -31,11 +31,20 @@ export default function IntegranteDetalhe() {
         Voltar
       </Botao>
 
-      <div className="mt-6 rounded-xl border border-folha-200 bg-white p-6 shadow-sm">
-        <p className="text-sm font-semibold text-folha-500">{integrante.papel}</p>
-        <h1 className="mt-2 text-2xl font-bold text-folha-700 md:text-3xl">
-          {integrante.nome}
-        </h1>
+      <div className="mt-6 rounded-xl border border-folha-200 bg-white p-6 shadow-xs">
+        <div className="flex flex-col gap-5 sm:flex-row sm:items-center">
+          <img
+            src={integrante.foto}
+            alt={`Foto de ${integrante.nome}`}
+            className="h-28 w-28 rounded-full border-4 border-folha-200 object-cover md:h-36 md:w-36"
+          />
+          <div>
+            <p className="text-sm font-semibold text-folha-500">{integrante.papel}</p>
+            <h1 className="mt-2 text-2xl font-bold text-folha-700 md:text-3xl">
+              {integrante.nome}
+            </h1>
+          </div>
+        </div>
 
         <dl className="mt-5 grid gap-3 text-sm sm:grid-cols-2">
           <div>
@@ -44,7 +53,7 @@ export default function IntegranteDetalhe() {
           </div>
           <div>
             <dt className="font-semibold text-slate-800">Turma</dt>
-            <dd className="mt-1 text-slate-600">1TDSPO</dd>
+            <dd className="mt-1 text-slate-600">{integrante.turma}</dd>
           </div>
         </dl>
 

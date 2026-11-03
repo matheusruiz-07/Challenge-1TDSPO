@@ -1,35 +1,28 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Layout from "./components/Layout";
-import Contato from "./pages/Contato";
-import Faq from "./pages/Faq";
-import Home from "./pages/Home";
-import IntegranteDetalhe from "./pages/IntegranteDetalhe";
-import Integrantes from "./pages/Integrantes";
-import Sobre from "./pages/Sobre";
-import Solucao from "./pages/Solucao";
+import { useEffect } from "react";
+import { Outlet, useLocation } from "react-router";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import { UsuarioAtivoProvider } from "./contexts/UsuarioAtivoProvider";
 
+// Estrutura compartilhada: Header e Footer ficam fixos e o Outlet
+// recebe a página da rota atual. O Provider deixa o usuário ativo
+// disponível para todas as páginas.
 export default function App() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="sobre" element={<Sobre />} />
-          <Route path="solucao" element={<Solucao />} />
-          <Route path="integrantes" element={<Integrantes />} />
-          <Route path="integrantes/:rm" element={<IntegranteDetalhe />} />
-          <Route path="faq" element={<Faq />} />
-          <Route path="contato" element={<Contato />} />
-          <Route
-            path="*"
-            element={
-              <p className="text-slate-600">
-                Página não encontrada. Use o menu para voltar ao início.
-              </p>
-            }
-          />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <UsuarioAtivoProvider>
+      <div className="flex min-h-screen flex-col bg-white text-slate-900">
+        <Header />
+        <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-8">
+          <Outlet />
+        </main>
+        <Footer />
+      </div>
+    </UsuarioAtivoProvider>
   );
 }

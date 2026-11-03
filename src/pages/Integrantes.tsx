@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 import Botao from "../components/Botao";
 import Card from "../components/Card";
 import { integrantes } from "../data/integrantes";
@@ -22,8 +22,18 @@ export default function Integrantes() {
             titulo={pessoa.nome}
             destaque={`RM ${pessoa.rm}`}
           >
-            <p className="font-semibold text-folha-500">{pessoa.papel}</p>
-            <p className="mt-2 leading-relaxed">{pessoa.descricao}</p>
+            <div className="flex items-center gap-4">
+              <img
+                src={pessoa.foto}
+                alt={`Foto de ${pessoa.nome}`}
+                className="h-20 w-20 shrink-0 rounded-full border-2 border-folha-200 object-cover sm:h-24 sm:w-24"
+              />
+              <div>
+                <p className="font-semibold text-folha-500">{pessoa.papel}</p>
+                <p className="mt-1 text-xs text-slate-500">Turma {pessoa.turma}</p>
+              </div>
+            </div>
+            <p className="mt-4 leading-relaxed">{pessoa.descricao}</p>
 
             <div className="mt-4 flex gap-4 text-sm font-semibold text-folha-700">
               <a
