@@ -5,8 +5,9 @@ import { useUsuarioAtivo } from "../contexts/UsuarioAtivoContext";
 const links = [
   { nome: "Home", caminho: "/" },
   { nome: "Sobre", caminho: "/sobre" },
-  { nome: "Solução", caminho: "/solucao" },
   { nome: "Usuários", caminho: "/usuarios" },
+  { nome: "Registrar ação", caminho: "/registrar" },
+  { nome: "Missões", caminho: "/missoes" },
   { nome: "Integrantes", caminho: "/integrantes" },
   { nome: "FAQ", caminho: "/faq" },
   { nome: "Contato", caminho: "/contato" },

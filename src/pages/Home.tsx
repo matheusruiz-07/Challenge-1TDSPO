@@ -38,8 +38,11 @@ export default function Home() {
         </p>
 
         <div className="mt-6 flex flex-wrap gap-3">
-          <Link to="/solucao" className={botaoPrincipal}>
-            Conhecer o avatar
+          <Link to="/usuarios" className={botaoPrincipal}>
+            Começar agora
+          </Link>
+          <Link to="/missoes" className={botaoSecundario}>
+            Ver as missões
           </Link>
           <Link to="/sobre" className={botaoSecundario}>
             Saber mais

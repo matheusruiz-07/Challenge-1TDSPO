@@ -5,10 +5,3 @@ export interface Pergunta {
   pergunta: string;
   resposta: string;
 }
-
-export interface MissaoDiaria {
-  id: number;
-  titulo: string;
-  descricao: string;
-  pontos: number;
-}
