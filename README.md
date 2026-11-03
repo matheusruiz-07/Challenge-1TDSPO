@@ -39,7 +39,6 @@ Challenge-1TDSPO/
 ├── tsconfig.json              TypeScript em modo strict
 ├── tailwind.config.js         paleta e tema do projeto
 ├── public/                    favicon, copiado direto para o build
-├── assets/                    fotos dos integrantes
 └── src/
     ├── main.tsx               ponto de partida da aplicação
     ├── App.tsx                todas as rotas
@@ -125,7 +124,7 @@ npm run preview
 <table>
   <tr>
     <td align="center" width="50%">
-      <img src="assets/WhatsApp%20Image%202026-05-24%20at%2022.10.34.jpeg" width="120" alt="Foto de Matheus Ruiz"><br>
+      <img src="src/assets/integrantes/matheus-ruiz.jpeg" width="120" alt="Foto de Matheus Ruiz"><br>
       <b>Matheus Ruiz Giatti</b><br>
       RM 570701 &middot; Turma 1TDSPO<br><br>
       Banco de dados e back-end Java<br><br>
@@ -133,7 +132,7 @@ npm run preview
       <a href="https://www.linkedin.com/in/matheus-ruiz-9215ba325/">LinkedIn</a>
     </td>
     <td align="center" width="50%">
-      <img src="assets/WA_1777749957165%7E2.jpeg" width="120" alt="Foto de Matheus Leite"><br>
+      <img src="src/assets/integrantes/matheus-leite.jpeg" width="120" alt="Foto de Matheus Leite"><br>
       <b>Matheus Leite Souza das Virgens</b><br>
       RM 573416 &middot; Turma 1TDSPO<br><br>
       Front-end e lógica em Python<br><br>
