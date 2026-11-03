@@ -12,6 +12,7 @@ import IntegranteDetalhe from "./pages/IntegranteDetalhe.tsx";
 import Integrantes from "./pages/Integrantes.tsx";
 import Sobre from "./pages/Sobre.tsx";
 import Solucao from "./pages/Solucao.tsx";
+import Usuarios from "./pages/Usuarios.tsx";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,7 @@ const router = createBrowserRouter([
       { path: "/", element: <Home /> },
       { path: "/sobre", element: <Sobre /> },
       { path: "/solucao", element: <Solucao /> },
+      { path: "/usuarios", element: <Usuarios /> },
       { path: "/integrantes", element: <Integrantes /> },
       { path: "/integrantes/:rm", element: <IntegranteDetalhe /> },
       { path: "/faq", element: <Faq /> },
