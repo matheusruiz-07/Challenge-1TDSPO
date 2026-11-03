@@ -25,3 +25,7 @@ dist-ssr
 
 .claude
 tsconfig.tsbuildinfo
+
+# variáveis de ambiente (o .env.example é versionado)
+.env*
+!.env.example
