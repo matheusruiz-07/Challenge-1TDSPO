@@ -1,4 +1,4 @@
-import type { Integrante } from "../types";
+import type { Integrante } from "../types/integrante";
 
 export const integrantes: Integrante[] = [
   {

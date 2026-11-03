@@ -1,4 +1,4 @@
-import type { Pergunta } from "../types";
+import type { Pergunta } from "../types/conteudo";
 
 export const perguntas: Pergunta[] = [
   {
