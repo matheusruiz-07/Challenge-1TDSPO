@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router";
 import Botao from "../components/Botao";
 import Card from "../components/Card";
 import { integrantes } from "../data/integrantes";

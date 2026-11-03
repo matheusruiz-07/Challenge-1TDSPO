@@ -1,4 +1,4 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router";
 import Botao from "../components/Botao";
 import { buscarIntegrante } from "../data/integrantes";
 
