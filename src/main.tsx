@@ -10,6 +10,7 @@ import Faq from "./pages/Faq.tsx";
 import Home from "./pages/Home.tsx";
 import IntegranteDetalhe from "./pages/IntegranteDetalhe.tsx";
 import Integrantes from "./pages/Integrantes.tsx";
+import NovoUsuario from "./pages/NovoUsuario.tsx";
 import PerfilUsuario from "./pages/PerfilUsuario.tsx";
 import Sobre from "./pages/Sobre.tsx";
 import Solucao from "./pages/Solucao.tsx";
@@ -25,6 +26,7 @@ const router = createBrowserRouter([
       { path: "/sobre", element: <Sobre /> },
       { path: "/solucao", element: <Solucao /> },
       { path: "/usuarios", element: <Usuarios /> },
+      { path: "/usuarios/novo", element: <NovoUsuario /> },
       { path: "/usuarios/:id", element: <PerfilUsuario /> },
       { path: "/integrantes", element: <Integrantes /> },
       { path: "/integrantes/:rm", element: <IntegranteDetalhe /> },

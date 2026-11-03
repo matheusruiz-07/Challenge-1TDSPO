@@ -41,6 +41,12 @@ export default function Usuarios() {
             acompanhar as missões.
           </p>
         </div>
+        <Link
+          to="/usuarios/novo"
+          className="shrink-0 self-start rounded-lg bg-folha-500 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-folha-700 sm:self-auto"
+        >
+          Cadastrar usuário
+        </Link>
       </div>
 
       {mensagem && (
@@ -55,7 +61,11 @@ export default function Usuarios() {
         ) : erro ? (
           <MensagemErro mensagem={erro} aoTentarNovamente={() => setTentativa((n) => n + 1)} />
         ) : usuarios.length === 0 ? (
-          <ListaVazia mensagem="Nenhum usuário cadastrado ainda." />
+          <ListaVazia mensagem="Nenhum usuário cadastrado ainda.">
+            <Link to="/usuarios/novo" className="font-semibold text-folha-700 underline">
+              Cadastrar o primeiro usuário
+            </Link>
+          </ListaVazia>
         ) : (
           <ol className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {usuarios.map((usuario, posicao) => (
