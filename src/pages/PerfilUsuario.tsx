@@ -5,7 +5,7 @@ import Carregando from "../components/Carregando";
 import ListaVazia from "../components/ListaVazia";
 import MensagemErro from "../components/MensagemErro";
 import { useUsuarioAtivo } from "../contexts/UsuarioAtivoContext";
-import { buscarUsuario, listarRegistrosDoUsuario } from "../services/usuarios";
+import { buscarUsuario, excluirUsuario, listarRegistrosDoUsuario } from "../services/usuarios";
 import type { Impacto, RegistroAcao } from "../types/acao";
 import type { NivelUsuario, Usuario } from "../types/usuario";
 
@@ -44,12 +44,14 @@ export default function PerfilUsuario() {
   const navigate = useNavigate();
   const location = useLocation();
   const mensagem = (location.state as { mensagem?: string } | null)?.mensagem;
-  const { usuarioAtivo, selecionarUsuario } = useUsuarioAtivo();
+  const { usuarioAtivo, selecionarUsuario, sairDoPerfil } = useUsuarioAtivo();
 
   const [perfil, setPerfil] = useState<PerfilCompleto | null>(null);
   const [carregando, setCarregando] = useState(idValido);
   const [erro, setErro] = useState<string | null>(null);
   const [tentativa, setTentativa] = useState(0);
+  const [excluindo, setExcluindo] = useState(false);
+  const [erroExclusao, setErroExclusao] = useState<string | null>(null);
 
   useEffect(() => {
     if (!idValido) return;
@@ -100,6 +102,26 @@ export default function PerfilUsuario() {
     );
   }
 
+  async function excluir(usuario: Usuario) {
+    const confirmou = window.confirm(
+      `Excluir ${usuario.nome}? O histórico de ações e as missões também serão apagados.`,
+    );
+    if (!confirmou) return;
+
+    setExcluindo(true);
+    setErroExclusao(null);
+    try {
+      await excluirUsuario(usuario.id);
+      if (usuarioAtivo?.id === usuario.id) {
+        sairDoPerfil();
+      }
+      navigate("/usuarios", { state: { mensagem: `${usuario.nome} foi excluído.` } });
+    } catch (falha) {
+      setErroExclusao(falha instanceof Error ? falha.message : "Não foi possível excluir.");
+      setExcluindo(false);
+    }
+  }
+
   const progresso = calcularProgresso(perfil);
   const emUso = usuarioAtivo?.id === perfil.id;
 
@@ -113,6 +135,12 @@ export default function PerfilUsuario() {
         <p role="status" className="mt-6 rounded-lg border-2 border-folha-500 bg-folha-50 px-4 py-3 text-sm text-folha-700">
           {mensagem}
         </p>
+      )}
+
+      {erroExclusao && (
+        <div className="mt-6">
+          <MensagemErro mensagem={erroExclusao} />
+        </div>
       )}
 
       <section className="mt-6 rounded-xl border border-folha-200 bg-white p-6 shadow-xs">
@@ -133,6 +161,20 @@ export default function PerfilUsuario() {
             ) : (
               <Botao onClick={() => selecionarUsuario(perfil)}>Usar este perfil</Botao>
             )}
+            <Link
+              to={`/usuarios/${perfil.id}/editar`}
+              className="rounded-lg border-2 border-folha-500 px-5 py-3 text-sm font-semibold text-folha-700 transition-colors hover:bg-folha-50"
+            >
+              Editar
+            </Link>
+            <button
+              type="button"
+              disabled={excluindo}
+              onClick={() => excluir(perfil)}
+              className="cursor-pointer rounded-lg border-2 border-red-300 px-5 py-3 text-sm font-semibold text-red-700 transition-colors hover:bg-red-50 disabled:cursor-wait disabled:opacity-60"
+            >
+              {excluindo ? "Excluindo..." : "Excluir"}
+            </button>
           </div>
         </div>
 
