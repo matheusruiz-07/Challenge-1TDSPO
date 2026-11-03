@@ -1,9 +1,13 @@
+import fotoLeite from "../assets/integrantes/matheus-leite.jpeg";
+import fotoRuiz from "../assets/integrantes/matheus-ruiz.jpeg";
 import type { Integrante } from "../types/integrante";
 
 export const integrantes: Integrante[] = [
   {
     rm: "570701",
     nome: "Matheus Ruiz Giatti",
+    turma: "1TDSPO",
+    foto: fotoRuiz,
     papel: "Banco de dados e back-end Java",
     descricao:
       "Responsavel pela modelagem do banco no Oracle Data Modeler, pelo script DDL com as dez tabelas " +
@@ -14,6 +18,8 @@ export const integrantes: Integrante[] = [
   {
     rm: "573416",
     nome: "Matheus Leite Souza das Virgens",
+    turma: "1TDSPO",
+    foto: fotoLeite,
     papel: "Front-end e logica em Python",
     descricao:
       "Responsavel pelas telas da aplicacao, pela estilizacao com Tailwind e pelo sistema de " +
