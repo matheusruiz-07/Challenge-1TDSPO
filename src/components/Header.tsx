@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router";
+import { useUsuarioAtivo } from "../contexts/UsuarioAtivoContext";
 
 const links = [
   { nome: "Home", caminho: "/" },
@@ -20,6 +21,8 @@ function classeDoLink({ isActive }: { isActive: boolean }) {
 
 export default function Header() {
   const [menuAberto, setMenuAberto] = useState(false);
+  const { usuarioAtivo } = useUsuarioAtivo();
+  const primeiroNome = usuarioAtivo?.nome.split(" ")[0];
 
   return (
     <header className="bg-folha-700 text-white">
@@ -39,6 +42,15 @@ export default function Header() {
               {link.nome}
             </NavLink>
           ))}
+          {usuarioAtivo && (
+            <NavLink
+              to={`/usuarios/${usuarioAtivo.id}`}
+              className="ml-2 rounded-full bg-folha-50 px-3 py-1.5 text-xs font-semibold text-folha-700 hover:bg-folha-200"
+              title="Perfil em uso"
+            >
+              Olá, {primeiroNome}
+            </NavLink>
+          )}
         </nav>
 
         <button
@@ -69,6 +81,15 @@ export default function Header() {
               {link.nome}
             </NavLink>
           ))}
+          {usuarioAtivo && (
+            <NavLink
+              to={`/usuarios/${usuarioAtivo.id}`}
+              className="mt-2 rounded-md bg-folha-50 px-3 py-2 text-sm font-semibold text-folha-700"
+              onClick={() => setMenuAberto(false)}
+            >
+              Perfil em uso: {usuarioAtivo.nome}
+            </NavLink>
+          )}
         </div>
       </nav>
     </header>
