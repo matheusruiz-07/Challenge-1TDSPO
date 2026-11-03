@@ -13,7 +13,7 @@ export const integrantes: Integrante[] = [
       "Responsavel pela modelagem do banco no Oracle Data Modeler, pelo script DDL com as dez tabelas " +
       "e pela camada DAO em Java que conecta a aplicacao ao Oracle.",
     github: "https://github.com/matheusruiz-07",
-    linkedin: "https://www.linkedin.com/in/matheus-ruiz-9215ba325/",
+    linkedin: "https://www.linkedin.com/in/matheus-ruiz-giatti/",
   },
   {
     rm: "573416",
