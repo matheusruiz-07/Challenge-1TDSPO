@@ -21,7 +21,7 @@ export default function Botao({
   return (
     <button
       type={submit ? "submit" : "button"}
-      className={`rounded-lg px-6 py-3 text-sm font-semibold transition-colors ${estilo}`}
+      className={`cursor-pointer rounded-lg px-6 py-3 text-sm font-semibold transition-colors ${estilo}`}
       onClick={onClick}
     >
       {children}

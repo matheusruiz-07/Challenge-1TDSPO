@@ -23,7 +23,7 @@ export default function Contato() {
     reset();
   }
 
-  const campo = "w-full rounded-lg border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-folha-200";
+  const campo = "w-full rounded-lg border px-3 py-2 text-sm focus:outline-hidden focus:ring-2 focus:ring-folha-200";
   const rotulo = "mb-1 block text-sm font-semibold text-slate-700";
   const aviso = "mt-1 text-xs text-red-600";
 
@@ -97,7 +97,7 @@ export default function Contato() {
 
         <button
           type="submit"
-          className="rounded-lg bg-folha-500 px-6 py-3 text-sm font-semibold text-white hover:bg-folha-700"
+          className="cursor-pointer rounded-lg bg-folha-500 px-6 py-3 text-sm font-semibold text-white hover:bg-folha-700"
         >
           Enviar mensagem
         </button>

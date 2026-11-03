@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 
 const pilares = [
   {
@@ -19,9 +19,9 @@ const pilares = [
 ];
 
 const botaoPrincipal =
-  "rounded-lg bg-folha-500 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-folha-700 focus:outline-none focus:ring-2 focus:ring-folha-200";
+  "rounded-lg bg-folha-500 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-folha-700 focus:outline-hidden focus:ring-2 focus:ring-folha-200";
 const botaoSecundario =
-  "rounded-lg border-2 border-folha-500 px-5 py-3 text-sm font-semibold text-folha-700 transition-colors hover:bg-folha-50 focus:outline-none focus:ring-2 focus:ring-folha-200";
+  "rounded-lg border-2 border-folha-500 px-5 py-3 text-sm font-semibold text-folha-700 transition-colors hover:bg-folha-50 focus:outline-hidden focus:ring-2 focus:ring-folha-200";
 
 export default function Home() {
   return (

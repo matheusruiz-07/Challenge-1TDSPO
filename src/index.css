@@ -1,13 +1,10 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@layer base {
-  :root {
-    color-scheme: light;
-  }
-
-  body {
-    @apply bg-white text-slate-900;
-  }
+/* Paleta verde do SoulUp (Tailwind 4: o tema fica no CSS, sem tailwind.config.js) */
+@theme {
+  --color-folha-50: #eef6f1;
+  --color-folha-200: #bcdcc9;
+  --color-folha-500: #2e7d4f;
+  --color-folha-700: #1d5c3a;
+  --color-folha-900: #123a25;
 }
