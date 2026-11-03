@@ -7,6 +7,7 @@ const links = [
   { nome: "Sobre", caminho: "/sobre" },
   { nome: "Solução", caminho: "/solucao" },
   { nome: "Usuários", caminho: "/usuarios" },
+  { nome: "Registrar ação", caminho: "/registrar" },
   { nome: "Integrantes", caminho: "/integrantes" },
   { nome: "FAQ", caminho: "/faq" },
   { nome: "Contato", caminho: "/contato" },
