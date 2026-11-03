@@ -30,7 +30,7 @@ export default function Faq() {
             >
               <button
                 type="button"
-                className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left font-semibold text-folha-700 hover:bg-folha-50"
+                className="flex w-full cursor-pointer items-center justify-between gap-4 px-5 py-4 text-left font-semibold text-folha-700 hover:bg-folha-50"
                 aria-expanded={aberta}
                 aria-controls={respostaId}
                 onClick={() => alternarPergunta(item.id)}

@@ -31,7 +31,7 @@ export default function IntegranteDetalhe() {
         Voltar
       </Botao>
 
-      <div className="mt-6 rounded-xl border border-folha-200 bg-white p-6 shadow-sm">
+      <div className="mt-6 rounded-xl border border-folha-200 bg-white p-6 shadow-xs">
         <p className="text-sm font-semibold text-folha-500">{integrante.papel}</p>
         <h1 className="mt-2 text-2xl font-bold text-folha-700 md:text-3xl">
           {integrante.nome}

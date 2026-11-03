@@ -43,7 +43,7 @@ export default function Header() {
 
         <button
           type="button"
-          className="rounded-md border border-folha-200 px-3 py-2 text-sm font-semibold text-white md:hidden"
+          className="cursor-pointer rounded-md border border-folha-200 px-3 py-2 text-sm font-semibold text-white md:hidden"
           aria-controls="menu-celular"
           aria-expanded={menuAberto}
           onClick={() => setMenuAberto((aberto) => !aberto)}
