@@ -20,7 +20,7 @@ Render, que grava os dados no banco Oracle.
 
 - **Aplicação publicada (Vercel):** <https://challenge-1tdspo.vercel.app>
 - **Repositório no GitHub:** <https://github.com/matheusruiz-07/Challenge-1TDSPO>
-- **Vídeo de apresentação (YouTube):** LINK_YOUTUBE
+- **Vídeo de apresentação (YouTube):** <https://youtu.be/vWnaYeNxh5c>
 - **API Java publicada (Render):** <https://soulup-api-k9nq.onrender.com>
 - **Documentação da API (Swagger):** <https://soulup-api-k9nq.onrender.com/swagger-ui.html>
 
